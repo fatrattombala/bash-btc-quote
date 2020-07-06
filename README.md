@@ -1,6 +1,7 @@
 # bash-btc-quote
 A simple bash script for displaying cryptocurrency prices in the unix shell bash. 
-Uses the Kraken API.
+Uses the Kraken API. This was the first version of the skript; it is faster than
+the CoinGecko-API-Version, but displays only BTC and ETH with much fewer options.
 
 # description
 This simple Linux shell script uses the "jq" command line JSON data processor
