@@ -10,6 +10,14 @@
 #expressed in ETH or in Gold (XAU). For a short help-text, start the script with
 #the "--h" option. Enjoy!
 
+# check coingecko availability
+CHECK=$(curl -s "https://api.coingecko.com/api/v3/ping" | jq -r .[])
+
+if [ "$CHECK" != "(V3) To the Moon!" ]; then
+    echo "CoinGecko server seems to be unavailable."
+    exit
+fi
+
 # default coins and currencies
 DEF_CUR1="\"usd\""
 DEF_CUR2="\"eur\""
